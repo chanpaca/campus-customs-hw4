@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Campus Customs — Verification Report</title>
+    <style>
+      :root {
+        --navy: #00356b;
+        --navy-deep: #06203f;
+        --gold: #c8a951;
+        --cream: #f6f2e9;
+        --paper: #ffffff;
+        --line: #e4ddcd;
+        --text: #1b2430;
+        --muted: #5f6a79;
+        --shadow: 0 10px 30px rgba(11, 26, 45, 0.12);
+        --ui: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+        --serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: var(--ui);
+        color: var(--text);
+        line-height: 1.6;
+        background:
+          radial-gradient(1000px 500px at 85% -5%, rgba(0, 53, 107, 0.06), transparent 60%),
+          radial-gradient(800px 450px at -10% 110%, rgba(200, 169, 81, 0.08), transparent 55%),
+          var(--cream);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      header.report-head {
+        background: linear-gradient(165deg, var(--navy) 0%, var(--navy-deep) 100%);
+        color: var(--cream);
+        border-bottom: 4px solid var(--gold);
+        padding: 2.5rem 1.5rem;
+      }
+
+      .wrap { max-width: 920px; margin: 0 auto; }
+
+      .eyebrow {
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin: 0 0 0.6rem;
+      }
+
+      header.report-head h1 {
+        font-family: var(--serif);
+        font-size: clamp(1.9rem, 4vw, 2.6rem);
+        margin: 0 0 0.5rem;
+        letter-spacing: -0.015em;
+      }
+
+      header.report-head p {
+        margin: 0;
+        max-width: 60ch;
+        color: rgba(247, 244, 236, 0.82);
+      }
+
+      main { padding: 2.5rem 1.5rem 4rem; }
+
+      .test {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        margin-bottom: 2rem;
+      }
+
+      .test__head {
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+        padding: 1.1rem 1.4rem;
+        border-bottom: 1px solid var(--line);
+        background: #fcfaf4;
+      }
+
+      .test__num {
+        flex: 0 0 auto;
+        display: grid;
+        place-items: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: var(--navy);
+        color: var(--cream);
+        font-weight: 700;
+        font-size: 1rem;
+      }
+
+      .test__title {
+        font-family: var(--serif);
+        font-size: 1.25rem;
+        margin: 0;
+        letter-spacing: -0.01em;
+      }
+
+      .test__body { padding: 1.4rem; }
+
+      .test__shot {
+        display: block;
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto 1.2rem;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: var(--cream);
+        box-shadow: 0 6px 18px rgba(11, 26, 45, 0.1);
+      }
+
+      .test__caption {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.97rem;
+        max-width: 68ch;
+      }
+
+      .badge {
+        display: inline-block;
+        margin-left: auto;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #1f7a4d;
+        background: #e6f3ec;
+        border: 1px solid #b9ddc7;
+        padding: 0.25rem 0.6rem;
+        border-radius: 999px;
+      }
+
+      footer.report-foot {
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.85rem;
+        padding: 0 1.5rem 3rem;
+      }
+
+      footer.report-foot code {
+        font-family: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+        background: #ece7db;
+        padding: 0.1em 0.4em;
+        border-radius: 4px;
+      }
+
+      @media (min-width: 680px) {
+        .test__body { display: grid; grid-template-columns: 420px 1fr; gap: 1.5rem; align-items: start; }
+        .test__shot { margin-bottom: 0; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="report-head">
+      <div class="wrap">
+        <p class="eyebrow">Campus Customs · New Haven, CT</p>
+        <h1>Application Verification Report</h1>
+        <p>
+          Three end-to-end checks confirming that the AI shopping assistant reads live store
+          data, renders it as shoppable product cards, and delivers the usability features built
+          for the storefront.
+        </p>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="test">
+        <div class="test__head">
+          <span class="test__num">1</span>
+          <h2 class="test__title">Real-time database inventory lookup in chat</h2>
+          <span class="badge">Pass</span>
+        </div>
+        <div class="test__body">
+          <img
+            class="test__shot"
+            src="app_check_images/inventory.png"
+            alt="Chat reply listing the live per-size stock for the Basic Hoodie Big Yale"
+          />
+          <p class="test__caption">
+            Asked which sizes are in stock, the assistant calls the <code>check_inventory</code> tool
+            and reports the exact per-size counts straight from <code>campus_customs.db</code> (XS: 15,
+            S: 5, M: 5, L: 8, XL: 2, XXL: 25). This proves the chatbot answers availability questions
+            from the live database rather than from guesses or stale text.
+          </p>
+        </div>
+      </section>
+
+      <section class="test">
+        <div class="test__head">
+          <span class="test__num">2</span>
+          <h2 class="test__title">Dynamic product cards rendered from chat search</h2>
+          <span class="badge">Pass</span>
+        </div>
+        <div class="test__body">
+          <img
+            class="test__shot"
+            src="app_check_images/dynamic_cards.png"
+            alt="Chat showing a column of hoodie product cards with images, names, and prices"
+          />
+          <p class="test__caption">
+            A plain-language request ("what hoodies do you have?") triggers a catalogue search and the
+            matching products come back as cards with their real image, name, and price. This proves
+            the chat turns a natural-language query into shoppable, clickable results that link to the
+            same product detail pages as the storefront.
+          </p>
+        </div>
+      </section>
+
+      <section class="test">
+        <div class="test__head">
+          <span class="test__num">3</span>
+          <h2 class="test__title">Usability improvement in action — size guidance</h2>
+          <span class="badge">Pass</span>
+        </div>
+        <div class="test__body">
+          <img
+            class="test__shot"
+            src="app_check_images/usability_feature.png"
+            alt="Chat giving fit advice for hoodies in response to a sizing question"
+          />
+          <p class="test__caption">
+            Asked how the hoodies fit, the assistant uses the size-recommendation feature to explain
+            that the heavyweight fleece runs slightly roomy and advises sizing down for a fitted look.
+            This proves the usability enhancements help shoppers decide with confidence, reducing the
+            hesitation and wrong-size returns that stall an online apparel purchase.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="report-foot">
+      <p class="wrap">
+        Screenshots captured from the running application (frontend on <code>:5174</code>, FastAPI
+        backend on <code>:8001</code>) with the agent reading live data from
+        <code>campus_customs.db</code>.
+      </p>
+    </footer>
+  </body>
+</html>

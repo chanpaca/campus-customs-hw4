@@ -1,0 +1,22 @@
+# Campus Customs (HW4) — Python backend dependencies.
+# Install with:  python -m pip install -r requirements.txt
+
+# Web framework + ASGI server
+fastapi>=0.115
+uvicorn[standard]>=0.30
+
+# Data models / validation (EmailStr needs email-validator)
+pydantic>=2.0
+email-validator>=2.0
+
+# AI agent + LLM access (gpt-4o-mini via the Portkey OpenAI-compatible gateway)
+pydantic-ai>=1.0
+openai>=1.40
+
+# Auth (bcrypt password hashing) and .env loading
+bcrypt>=4.1
+python-dotenv>=1.0
+
+# Note: the verification screenshots in output/app_check_images/ were captured
+# with Playwright (`pip install playwright && playwright install chromium`).
+# It is a dev/test-only tool and is NOT required to run the app.
